@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "nama": "RAHMAD GAZAU",
+    "tempat_lahir": "MEDAN",
+    "tanggal_lahir": "11 Mei 2005",
+    "sertifikat": [
+      {
+        "jenis_personel": "Operator",
+        "jenis_alat": "VIBRATORY ROLLER",
+        "klasifikasi": "Operator Alat Berat",
+        "no_registrasi": "191727",
+        "kelas": "NON KELAS",
+        "masa_berlaku": "22 Juni 2030"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nama": "AFINDA ESTA SURYA",
+    "tempat_lahir": "PADANG CERMIN",
+    "tanggal_lahir": "19 Januari 1996",
+    "sertifikat": [
+      {
+        "jenis_personel": "Operator",
+        "jenis_alat": "ASPHALT FINISHER",
+        "klasifikasi": "Operator Alat Berat",
+        "no_registrasi": "176412",
+        "kelas": "NON KELAS",
+        "masa_berlaku": "23 September 2029"
+      },
+      {
+        "jenis_personel": "Operator",
+        "jenis_alat": "MOTOR GRADER",
+        "klasifikasi": "Operator Alat Berat",
+        "no_registrasi": "201472",
+        "kelas": "1 (Satu)",
+        "masa_berlaku": "23 September 2029"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nama": "HABIBULLAH",
+    "tempat_lahir": "TELAGA TUJUH",
+    "tanggal_lahir": "25 Agustus 1997",
+    "sertifikat": [
+      {
+        "jenis_personel": "Operator",
+        "jenis_alat": "PNEUMATIC TYRE ROLLER",
+        "klasifikasi": "Operator Alat Berat",
+        "no_registrasi": "167138",
+        "kelas": "NON KELAS",
+        "masa_berlaku": "07 Oktober 2029"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nama": "LEGIONO",
+    "tempat_lahir": "PADANG CERMIN",
+    "tanggal_lahir": "29 April 1985",
+    "sertifikat": [
+      {
+        "jenis_personel": "Operator",
+        "jenis_alat": "TANDEM ROLLER",
+        "klasifikasi": "Operator Alat Berat",
+        "no_registrasi": "189726",
+        "kelas": "NON KELAS",
+        "masa_berlaku": "25 September 2029"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nama": "WASKITO",
+    "tempat_lahir": "PADANG CERMIN",
+    "tanggal_lahir": "02 Januari 1983",
+    "sertifikat": [
+      {
+        "jenis_personel": "Operator",
+        "jenis_alat": "PNEUMATIC TYRE ROLLER",
+        "klasifikasi": "Operator Alat Berat",
+        "no_registrasi": "167139",
+        "kelas": "NON KELAS",
+        "masa_berlaku": "07 Oktober 2029"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nama": "DEDI ERWIN SYAHPUTRA",
+    "tempat_lahir": "BULU CINA",
+    "tanggal_lahir": "25 Oktober 1978",
+    "sertifikat": [
+      {
+        "jenis_personel": "Operator",
+        "jenis_alat": "ASPHALT FINISHER",
+        "klasifikasi": "Operator Alat Berat",
+        "no_registrasi": "176413",
+        "kelas": "NON KELAS",
+        "masa_berlaku": "23 September 2029"
+      }
+    ]
+  }
+]
