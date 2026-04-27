@@ -1,127 +1,97 @@
 <!doctype html>
 <html lang="id">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="TemanK3">
-    <meta name="author" content="MBT Solution">
-    <meta name="generator" content="Sancode">
-    <title>Beranda TemanK3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TemanK3">
+  <title>Beranda TemanK3</title>
 
-    <link rel="shortcut icon" href="https://temank3.kemnaker.go.id/public/images/logo-kemnaker.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://temank3.kemnaker.go.id/public/themes/website/asset/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://temank3.kemnaker.go.id/public/themes/website/asset/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://temank3.kemnaker.go.id/public/themes/website/asset/favicons/favicon-16x16.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://temank3.kemnaker.go.id/public/themes/website/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://temank3.kemnaker.go.id/public/themes/adminlte/plugins/jquery/jquery.min.js"></script>
-    <link href="https://temank3.kemnaker.go.id/public/themes/website/css/carousel.css" rel="stylesheet">
-    <link href="https://temank3.kemnaker.go.id/public/themes/website/css/style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="https://temank3.kemnaker.go.id/public/images/logo-kemnaker.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://temank3.kemnaker.go.id/public/themes/website/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://temank3.kemnaker.go.id/public/themes/adminlte/plugins/jquery/jquery.min.js"></script>
+  <link href="https://temank3.kemnaker.go.id/public/themes/website/css/carousel.css" rel="stylesheet">
+  <link href="https://temank3.kemnaker.go.id/public/themes/website/css/style.css" rel="stylesheet">
 
-    <style>
-      .page-item.active .page-link { background-color: #15406a!important; border-color: #15406a!important; }
-      .page-link { color: #15406a!important; }
-      li.page-item.active > a { color: #fff!important; }
+  <style>
+    /* ── pagination ── */
+    .page-item.active .page-link { background-color: #15406a!important; border-color: #15406a!important; }
+    .page-link { color: #15406a!important; }
+    li.page-item.active > a { color: #fff!important; }
 
-      .logo, .navbar-brand { width: 170px !important; height: 58px; margin-bottom: 6px; }
-      .logo2, .navbar-brand { width: 100px !important; height: 53px; }
-      .logo img, .navbar-brand img { object-position: left; }
-      .banner-description { color: #fff; text-align: center; }
+    /* ── navbar logo ── */
+    .logo, .navbar-brand { width: 170px !important; height: 58px; margin-bottom: 6px; }
+    .logo2, .navbar-brand { width: 100px !important; height: 53px; }
+    .logo img, .navbar-brand img { object-position: left; }
+    .banner-description { color: #fff; text-align: center; }
 
-      .well {
-        min-height: 20px;
-        padding: 0px;
-        margin-bottom: 20px;
-        background-color: #15406a;
-        border: 0px;
-        border-radius: 0px;
-        box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-        padding-left: 15px;
-        color: #ffffff;
-      }
-      .thumbnail .caption { padding: 9px; color: #333; padding-left: 0px; padding-right: 0px; }
-      .well-add-card { margin-bottom: 10px; }
-      .btn-add-card { margin-top: 20px; }
-      .thumbnail {
-        display: block;
-        padding: 4px;
-        margin-bottom: 20px;
-        line-height: 1.42857143;
-        background-color: #fff;
-        border: 6px solid #15406a;
-        border-radius: 15px;
-        transition: border .2s ease-in-out;
-        padding-left: 0px;
-        padding-right: 0px;
-      }
-      .btn { border-radius: 0px; }
-      .btn-update { margin-left: 15px; }
+    /* ── card & table ── */
+    .well {
+      min-height: 20px; padding: 0; margin-bottom: 20px;
+      background-color: #15406a; border: 0; border-radius: 0;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+      padding-left: 15px; color: #fff;
+    }
+    .thumbnail .caption { padding: 9px; color: #333; padding-left: 0; padding-right: 0; }
+    .well-add-card { margin-bottom: 10px; }
+    .btn-add-card { margin-top: 20px; }
+    .thumbnail {
+      display: block; padding: 4px; margin-bottom: 20px;
+      line-height: 1.42857143; background-color: #fff;
+      border: 6px solid #15406a; border-radius: 15px;
+      transition: border .2s ease-in-out;
+      padding-left: 0; padding-right: 0;
+    }
+    .btn { border-radius: 0; }
+    .btn-update { margin-left: 15px; }
+    .thead-inverse th { color: #fff; background-color: #15406a; }
 
-      /* thead-inverse — Bootstrap 3 compat */
-      .thead-inverse th {
-        color: #fff;
-        background-color: #15406a;
-      }
+    /* ── state panels ── */
+    #view-search, #view-result, #view-notfound { display: none; }
 
-      #loader { text-align: center; padding: 80px 20px; }
-      #loader .spinner {
-        width: 50px; height: 50px;
-        border: 5px solid #eee;
-        border-top-color: #15406a;
-        border-radius: 50%;
-        animation: spin 0.8s linear infinite;
-        margin: 0 auto 20px;
-      }
-      @keyframes spin { to { transform: rotate(360deg); } }
-      #result-section, #not-found, #no-param { display: none; }
-    </style>
+    /* ── search form card ── */
+    .textku { color: #fff; font-size: 18px; margin-top: 5px; margin-right: 5px; }
+    p { margin: 3px; }
+  </style>
 </head>
 <body>
 
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
 <header>
-<div id="temank3">
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="https://temank3.kemnaker.go.id">
-        <img src="https://temank3.kemnaker.go.id/public/themes/website/asset/img/logo.png" alt="logo" class="logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="https://temank3.kemnaker.go.id"><i class="fa fa-home"></i> BERANDA</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://temank3.kemnaker.go.id/page/flowchart"><i class="fa fa-flag"></i> FLOW CHART</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><i class="fa fa-th"></i> LAYANAN</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://temank3.kemnaker.go.id/portal">Pengesahan Gambar Rencana (PGR)</a></li>
-              <li><a class="dropdown-item" href="https://temank3.kemnaker.go.id/page/sub_pemeriksaan/d41d8cd98f00b204e9800998ecf8427e">Penyelidikan Bahan (PB)</a></li>
-              <li><a class="dropdown-item" href="https://temank3.kemnaker.go.id/portal">Surat Keterangan K3</a></li>
-              <li><a class="dropdown-item" href="https://temank3.kemnaker.go.id/p2hiv" target="_blank">E-Learning P2HIV</a></li>
-              <li><a class="dropdown-item" href="https://temank3.kemnaker.go.id/p2hiv" target="_blank">AIDS AWARD</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://temank3.kemnaker.go.id/page/news"><i class="fa fa-newspaper"></i> INFO &amp; ARTIKEL</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://temank3.kemnaker.go.id/page/perundangan"><i class="fa fa-book"></i> DOKUMEN K3</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://temank3.kemnaker.go.id/page/kontak"><i class="fa fa-user"></i> HUBUNGI KAMI</a>
-          </li>
-        </ul>
+  <div id="temank3">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="https://temank3.kemnaker.go.id">
+          <img src="https://temank3.kemnaker.go.id/public/themes/website/asset/img/logo.png" alt="logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="https://temank3.kemnaker.go.id"><i class="fa fa-home"></i> BERANDA</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://temank3.kemnaker.go.id/page/flowchart"><i class="fa fa-flag"></i> FLOW CHART</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><i class="fa fa-th"></i> LAYANAN</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://temank3.kemnaker.go.id/portal">Pengesahan Gambar Rencana (PGR)</a></li>
+                <li><a class="dropdown-item" href="https://temank3.kemnaker.go.id/page/sub_pemeriksaan/d41d8cd98f00b204e9800998ecf8427e">Penyelidikan Bahan (PB)</a></li>
+                <li><a class="dropdown-item" href="https://temank3.kemnaker.go.id/portal">Surat Keterangan K3</a></li>
+                <li><a class="dropdown-item" href="https://temank3.kemnaker.go.id/p2hiv" target="_blank">E-Learning P2HIV</a></li>
+                <li><a class="dropdown-item" href="https://temank3.kemnaker.go.id/p2hiv" target="_blank">AIDS AWARD</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="https://temank3.kemnaker.go.id/page/news"><i class="fa fa-newspaper"></i> INFO &amp; ARTIKEL</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://temank3.kemnaker.go.id/page/perundangan"><i class="fa fa-book"></i> DOKUMEN K3</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://temank3.kemnaker.go.id/page/kontak"><i class="fa fa-user"></i> HUBUNGI KAMI</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-</div>
+    </nav>
+  </div>
 </header>
 
+<!-- ═══════════════════════════ MAIN ═══════════════════════════ -->
 <main>
 <div class="new-support-section">
   <div class="triangle-left"></div>
@@ -131,91 +101,157 @@
       <br>
       <div class="container" id="tourpackages-carousel">
         <div class="row">
-          <div class="col-lg-12">
 
-            <!-- Loader -->
-            <div id="loader">
-              <div class="spinner"></div>
-              <p class="text-muted">Memuat data personel...</p>
-            </div>
-
-            <!-- Tidak ada ?id= -->
-            <div id="no-param" style="padding: 60px 20px; text-align: center">
-              <i class="fa fa-id-card" style="font-size: 60px; color: #15406a; opacity: 0.3"></i>
-              <h3 style="color: #15406a; margin-top: 20px">Silakan Scan QR Code</h3>
-              <p class="text-muted">
-                Halaman ini menampilkan data personel berdasarkan QR Code masing-masing operator.<br>
-                Scan QR Code pada kartu identitas untuk melihat data sertifikasi.
-              </p>
-            </div>
-
-            <!-- Data ditemukan -->
-            <div id="result-section">
-              <h1>Hasil Pencarian Personel </h1>
-              <div class="col-xs-12">
-                <div class="thumbnail">
-                  <div class="caption">
-                    <div class="col-lg-12"></div>
-                    <div class="col-lg-12 well well-add-card">
-                      <h4>BIODATA PERSONEL</h4>
+          <!-- ───────────── STATE 1 : FORM PENCARIAN ───────────── -->
+          <div id="view-search">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div class="thumbnail">
+                <div class="caption">
+                  <div class="col-lg-12 well well-add-card">
+                    <div class="textku">Cari Personel</div>
+                  </div>
+                  <div class="col-lg-12" style="padding:15px">
+                    <div class="form-group row" style="margin-bottom:16px">
+                      <label class="col-md-4 col-form-label text-md-right">Nama Peserta</label>
+                      <div class="col-md-8">
+                        <input type="text" id="input-nama" class="form-control" placeholder="Nama lengkap sesuai sertifikat">
+                      </div>
                     </div>
-                    <div class="table-responsive left">
-                      <table width="100%" class="table table-bordered">
-                        <thead class="thead">
-                          <tr>
-                            <th style="width: 10px">No</th>
-                            <th style="width: 20px">Nama</th>
-                            <th style="width: 40px">Tanggal Lahir</th>
-                            <th style="width: 20px">Nama Instansi</th>
-                            <th style="width: 20px">Jenis Personil</th>
-                            <th style="width: 40px">Jenis Alat</th>
-                            <th style="width: 40px">Klasifikasi</th>
-                            <th style="width: 40px">Kelas</th>
-                            <th style="width: 40px">No. Registerasi</th>
-                            <th style="width: 40px">Masa Berlaku</th>
-                          </tr>
-                        </thead>
-                        <tbody id="table-body"></tbody>
-                      </table>
+                    <div class="form-group row" style="margin-bottom:16px">
+                      <label class="col-md-4 col-form-label text-md-right">Tanggal Lahir</label>
+                      <div class="col-md-8">
+                        <input type="date" id="input-tgl" class="form-control">
+                      </div>
                     </div>
-                    <div class="col-lg-12">
-                      <p class="mb-0">
-                        <a href="https://temank3.kemnaker.go.id/" class="btn btn-primary btn-xs btn-update btn-add-card">Kembali</a>
-                      </p>
+                    <div class="form-group row">
+                      <div class="col-md-12">
+                        <button id="btn-submit" class="btn btn-primary btn-xs btn-update btn-add-card">
+                          <i class="fa fa-search"></i> Cari
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Tidak ditemukan -->
-            <div id="not-found" style="padding: 60px 20px; text-align: center">
-              <i class="fa fa-search" style="font-size: 60px; color: #15406a; opacity: 0.3"></i>
-              <h3 style="color: #15406a; margin-top: 20px">Data Tidak Ditemukan</h3>
-              <p class="text-muted">
-                ID <strong id="id-not-found"></strong> tidak terdapat dalam database.<br>
-                QR Code mungkin tidak valid atau data belum diinput.
-              </p>
-              <hr>
-              <p style="font-size: 13px; color: #888">Hubungi administrasi PT. ASW untuk informasi lebih lanjut.</p>
-            </div>
-
           </div>
-        </div>
-      </div>
+
+          <!-- ───────────── STATE 2 : DATA DITEMUKAN ───────────── -->
+          <div id="view-result" class="col-lg-12">
+            <h1>Hasil Pencarian Personel</h1>
+            <div class="col-xs-12">
+              <div class="thumbnail">
+                <div class="caption">
+                  <div class="col-lg-12 well well-add-card">
+                    <h4>BIODATA PERSONEL</h4>
+                  </div>
+                  <div class="table-responsive">
+                    <table width="100%" class="table table-bordered">
+                      <thead class="thead-inverse">
+                        <tr>
+                          <th style="width:10px">No</th>
+                          <th style="width:20px">Nama</th>
+                          <th style="width:40px">Tanggal Lahir</th>
+                          <th style="width:20px">Nama Instansi</th>
+                          <th style="width:20px">Jenis Personil</th>
+                          <th style="width:40px">Jenis Alat</th>
+                          <th style="width:40px">Klasifikasi</th>
+                          <th style="width:40px">Kelas</th>
+                          <th style="width:40px">No. Registrasi</th>
+                          <th style="width:40px">Masa Berlaku</th>
+                        </tr>
+                      </thead>
+                      <tbody id="result-tbody"></tbody>
+                    </table>
+                  </div>
+                  <div class="col-lg-12">
+                    <p class="mb-0">
+                      <button class="btn btn-primary btn-xs btn-update btn-add-card btn-kembali">
+                        <i class="fa fa-arrow-left"></i> Kembali
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ───────────── STATE 3 : DATA TIDAK DITEMUKAN ───────────── -->
+          <div id="view-notfound" class="col-lg-12">
+            <h1>Hasil Pencarian Personel</h1>
+            <div class="col-xs-12">
+              <div class="thumbnail">
+                <div class="caption">
+                  <div class="col-lg-12 well well-add-card">
+                    <h4>BIODATA PERSONEL</h4>
+                  </div>
+                  <div class="col-lg-12" style="padding: 40px 20px; text-align: center;">
+                    <div class="alert alert-danger" style="border-radius:8px">
+                      <i class="fa fa-exclamation-circle" style="font-size:28px; margin-bottom:10px; display:block"></i>
+                      <h4 style="margin-bottom:8px">Data Tidak Ditemukan</h4>
+                      <p style="margin:0">
+                        Data yang Anda cari tidak ditemukan.<br>
+                        Harap menghubungi petugas TemanK3 melalui email:
+                        <strong>layanank3@kemnaker.go.id</strong>
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Tabel kosong seperti tampilan asli -->
+                  <div class="table-responsive">
+                    <table width="100%" class="table table-bordered">
+                      <thead class="thead-inverse">
+                        <tr>
+                          <th style="width:10px">No</th>
+                          <th style="width:20px">Nama</th>
+                          <th style="width:40px">Tanggal Lahir</th>
+                          <th style="width:20px">Nama Instansi</th>
+                          <th style="width:20px">Jenis Personil</th>
+                          <th style="width:40px">Jenis Alat</th>
+                          <th style="width:40px">Klasifikasi</th>
+                          <th style="width:40px">Kelas</th>
+                          <th style="width:40px">No. Registrasi</th>
+                          <th style="width:40px">Masa Berlaku</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td colspan="10" class="text-center text-muted" style="padding:20px; font-style:italic">
+                            — Tidak ada data —
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <p class="mb-0">
+                      <button class="btn btn-primary btn-xs btn-update btn-add-card btn-kembali">
+                        <i class="fa fa-arrow-left"></i> Kembali
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /row -->
+      </div><!-- /container -->
     </div>
   </div>
 </div>
 </main>
 
-<!-- FOOTER -->
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
 <footer id="footer-two">
   <div class="container">
     <center>
       <img src="https://temank3.kemnaker.go.id/public/themes/website/asset/img/logofooter1.png" class="img-fluid" alt="Responsive image">
       <br>
       <span class="banner-description">
-        Jl. Jenderal Gatot Subroto Kav. 51, Daerah Khusus Ibukota Jakarta 12750,Indonesia <a href="http://mbtsolution.com">.</a><br>
+        Jl. Jenderal Gatot Subroto Kav. 51, Daerah Khusus Ibukota Jakarta 12750, Indonesia<br>
       </span>
     </center>
     <br>
@@ -226,54 +262,215 @@
 <script src="https://temank3.kemnaker.go.id/public/themes/website/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", async function () {
-    const params = new URLSearchParams(window.location.search);
+  /* ─── Embedded data ─── */
+  const DATA = [
+    {
+      "id": 1,
+      "nama": "RAHMAD GAJALI",
+      "tempat_lahir": "MEDAN",
+      "tanggal_lahir": "11 Mei 2005",
+      "nama_instansi": "PT. Awiga Satria Wibawa",
+      "sertifikat": [
+        { "jenis_personel": "Operator", "jenis_alat": "VIBRATORY ROLLER", "klasifikasi": "Operator Alat Berat", "no_registrasi": "191727", "kelas": "NON KELAS", "masa_berlaku": "22 Juni 2030" }
+      ]
+    },
+    {
+      "id": 2,
+      "nama": "AFINDA ESTA SURYA",
+      "tempat_lahir": "PADANG CERMIN",
+      "tanggal_lahir": "19 Januari 1996",
+      "nama_instansi": "PT. Awiga Satria Wibawa",
+      "sertifikat": [
+        { "jenis_personel": "Operator", "jenis_alat": "ASPHALT FINISHER", "klasifikasi": "Operator Alat Berat", "no_registrasi": "176412", "kelas": "NON KELAS", "masa_berlaku": "23 September 2029" }
+      ]
+    },
+    {
+      "id": 3,
+      "nama": "AFINDA ESTA SURYA",
+      "tempat_lahir": "PADANG CERMIN",
+      "tanggal_lahir": "19 Januari 1996",
+      "nama_instansi": "PT. Awiga Satria Wibawa",
+      "sertifikat": [
+        { "jenis_personel": "Operator", "jenis_alat": "MOTOR GRADER", "klasifikasi": "Operator Alat Berat", "no_registrasi": "201472", "kelas": "1 (Satu)", "masa_berlaku": "23 September 2029" }
+      ]
+    },
+    {
+      "id": 4,
+      "nama": "HABIBULLAH",
+      "tempat_lahir": "TELAGA TUJUH",
+      "tanggal_lahir": "25 Agustus 1997",
+      "nama_instansi": "PT. Awiga Satria Wibawa",
+      "sertifikat": [
+        { "jenis_personel": "Operator", "jenis_alat": "PNEUMATIC TYRE ROLLER", "klasifikasi": "Operator Alat Berat", "no_registrasi": "167138", "kelas": "NON KELAS", "masa_berlaku": "07 Oktober 2029" }
+      ]
+    },
+    {
+      "id": 5,
+      "nama": "LEGIONO",
+      "tempat_lahir": "PADANG CERMIN",
+      "tanggal_lahir": "29 April 1985",
+      "nama_instansi": "PT. Awiga Satria Wibawa",
+      "sertifikat": [
+        { "jenis_personel": "Operator", "jenis_alat": "TANDEM ROLLER", "klasifikasi": "Operator Alat Berat", "no_registrasi": "189726", "kelas": "NON KELAS", "masa_berlaku": "25 September 2029" }
+      ]
+    },
+    {
+      "id": 6,
+      "nama": "WASKITO",
+      "tempat_lahir": "PADANG CERMIN",
+      "tanggal_lahir": "02 Januari 1983",
+      "nama_instansi": "PT. Awiga Satria Wibawa",
+      "sertifikat": [
+        { "jenis_personel": "Operator", "jenis_alat": "PNEUMATIC TYRE ROLLER", "klasifikasi": "Operator Alat Berat", "no_registrasi": "167139", "kelas": "NON KELAS", "masa_berlaku": "07 Oktober 2029" }
+      ]
+    },
+    {
+      "id": 7,
+      "nama": "DEDI ERWIN SYAHPUTRA",
+      "tempat_lahir": "BULU CINA",
+      "tanggal_lahir": "25 Oktober 1978",
+      "nama_instansi": "PT. Awiga Satria Wibawa",
+      "sertifikat": [
+        { "jenis_personel": "Operator", "jenis_alat": "ASPHALT FINISHER", "klasifikasi": "Operator Alat Berat", "no_registrasi": "176413", "kelas": "NON KELAS", "masa_berlaku": "23 September 2029" }
+      ]
+    }
+  ];
+
+  /* ─── Konversi tanggal Indonesia → objek Date ─── */
+  const BULAN = {
+    "Januari": 0, "Februari": 1, "Maret": 2, "April": 3,
+    "Mei": 4, "Juni": 5, "Juli": 6, "Agustus": 7,
+    "September": 8, "Oktober": 9, "November": 10, "Desember": 11
+  };
+
+  function parseIndonesianDate(str) {
+    /* contoh: "11 Mei 2005" */
+    const parts = str.trim().split(" ");
+    if (parts.length !== 3) return null;
+    const d = parseInt(parts[0], 10);
+    const m = BULAN[parts[1]];
+    const y = parseInt(parts[2], 10);
+    if (isNaN(d) || m === undefined || isNaN(y)) return null;
+    return new Date(y, m, d);
+  }
+
+  /* ─── Tampilkan view tertentu ─── */
+  function showView(id) {
+    ["view-search", "view-result", "view-notfound"].forEach(v =>
+      document.getElementById(v).style.display = "none"
+    );
+    document.getElementById(id).style.display = "block";
+  }
+
+  /* ─── Cari data ─── */
+  function cariPersonel() {
+    const namaInput = document.getElementById("input-nama").value.trim().toUpperCase();
+    const tglInput  = document.getElementById("input-tgl").value; /* YYYY-MM-DD */
+
+    if (!namaInput || !tglInput) {
+      alert("Silakan isi Nama Peserta dan Tanggal Lahir terlebih dahulu.");
+      return;
+    }
+
+    /* Parse input date */
+    const [iy, im, id_] = tglInput.split("-").map(Number);
+    const inputDate = new Date(iy, im - 1, id_);
+
+    /* Cari semua entri yang cocok nama + tgl lahir */
+    const matches = DATA.filter(person => {
+      const namaCocok = person.nama.toUpperCase() === namaInput;
+      const tglParsed = parseIndonesianDate(person.tanggal_lahir);
+      const tglCocok  = tglParsed &&
+                        tglParsed.getFullYear()  === inputDate.getFullYear() &&
+                        tglParsed.getMonth()     === inputDate.getMonth() &&
+                        tglParsed.getDate()      === inputDate.getDate();
+      return namaCocok && tglCocok;
+    });
+
+    if (matches.length === 0) {
+      showView("view-notfound");
+      return;
+    }
+
+    /* Render tabel */
+    const tbody = document.getElementById("result-tbody");
+    tbody.innerHTML = "";
+    let rowNo = 1;
+    matches.forEach(person => {
+      person.sertifikat.forEach(s => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${rowNo++}</td>
+            <td>${person.nama}</td>
+            <td>${person.tanggal_lahir}</td>
+            <td>${person.nama_instansi || "PT. Awiga Satria Wibawa"}</td>
+            <td>${s.jenis_personel}</td>
+            <td>${s.jenis_alat}</td>
+            <td>${s.klasifikasi}</td>
+            <td>${s.kelas}</td>
+            <td>${s.no_registrasi}</td>
+            <td>${s.masa_berlaku}</td>
+          </tr>`;
+      });
+    });
+
+    showView("view-result");
+  }
+
+  /* ─── Event listeners ─── */
+  document.addEventListener("DOMContentLoaded", function () {
+
+    /* Cek QR param ?id= */
+    const params  = new URLSearchParams(window.location.search);
     const idParam = params.get("id");
 
-    if (!idParam) {
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("no-param").style.display = "block";
-      return;
+    if (idParam) {
+      /* Mode QR Code – cari by id */
+      const person = DATA.find(r => r.id === parseInt(idParam, 10));
+      if (!person) {
+        showView("view-notfound");
+      } else {
+        const tbody = document.getElementById("result-tbody");
+        tbody.innerHTML = "";
+        person.sertifikat.forEach((s, i) => {
+          tbody.innerHTML += `
+            <tr>
+              <td>${i + 1}</td>
+              <td>${person.nama}</td>
+              <td>${person.tanggal_lahir}</td>
+              <td>${person.nama_instansi || "PT. Awiga Satria Wibawa"}</td>
+              <td>${s.jenis_personel}</td>
+              <td>${s.jenis_alat}</td>
+              <td>${s.klasifikasi}</td>
+              <td>${s.kelas}</td>
+              <td>${s.no_registrasi}</td>
+              <td>${s.masa_berlaku}</td>
+            </tr>`;
+        });
+        showView("view-result");
+      }
+    } else {
+      /* Mode manual – tampilkan form */
+      showView("view-search");
     }
 
-    let data;
-    try {
-      const res = await fetch("data.json");
-      if (!res.ok) throw new Error();
-      data = await res.json();
-    } catch {
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("not-found").style.display = "block";
-      document.getElementById("id-not-found").textContent = idParam;
-      return;
-    }
+    /* Tombol Cari */
+    document.getElementById("btn-submit").addEventListener("click", cariPersonel);
 
-    const person = data.find((r) => r.id === parseInt(idParam, 10));
-    document.getElementById("loader").style.display = "none";
+    /* Enter di input juga trigger cari */
+    ["input-nama", "input-tgl"].forEach(id => {
+      document.getElementById(id).addEventListener("keydown", function (e) {
+        if (e.key === "Enter") cariPersonel();
+      });
+    });
 
-    if (!person) {
-      document.getElementById("not-found").style.display = "block";
-      document.getElementById("id-not-found").textContent = idParam;
-      return;
-    }
-
-    document.getElementById("result-section").style.display = "block";
-
-    const tbody = document.getElementById("table-body");
-    person.sertifikat.forEach((s, i) => {
-      tbody.innerHTML += `
-        <tr>
-          <td>${i + 1}</td>
-          <td><span class="class">${person.nama}</span></td>
-          <td><span class="class">${person.tanggal_lahir}</span></td>
-          <td><span class="class">${person.nama_instansi || "PT. Awiga Satria Wibawa"}</span></td>
-          <td><span class="class">${s.jenis_personel}</span></td>
-          <td><span class="class">${s.jenis_alat}</span></td>
-          <td><span class="class">${s.klasifikasi}</span></td>
-          <td><span class="class">${s.kelas}</span></td>
-          <td><span class="class">${s.no_registrasi}</span></td>
-          <td><span class="class">${s.masa_berlaku}</span></td>
-        </tr>`;
+    /* Semua tombol Kembali → kembali ke form & reset */
+    document.querySelectorAll(".btn-kembali").forEach(btn => {
+      btn.addEventListener("click", function () {
+        document.getElementById("input-nama").value = "";
+        document.getElementById("input-tgl").value  = "";
+        showView("view-search");
+      });
     });
   });
 </script>
